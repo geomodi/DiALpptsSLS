@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/funnel.js"></script>
+    <style>
+        /* Add your custom CSS styles here for a slick, modern look */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1560px; /* Increased container size by 30% */
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            position: relative; /* Required for logo positioning */
+        }
+        .logo {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 100px; /* Adjust the size as needed */
+            z-index: 1; /* Ensure the logo is on top of other elements */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://raw.githubusercontent.com/geomodi/wwbdc/main/wwbdc-logo.png?token=GHSAT0AAAAAACJS2ZQR7JO4TU2VB4BAWWJ4ZKQALBA" alt="Company Logo" class="logo"> <!-- Logo added here -->
+        <div id="container" style="height: 780px;"></div> <!-- Increased graph size by 30% -->
+    </div>
+
+    <script>
+        Highcharts.chart('container', {
+            chart: {
+                type: 'column'
+            },
+            title: {
+                text: 'Call Statistics by Rep'
+            },
+            xAxis: {
+                categories: ['Daniela Zuluaga', 'Sandra Callejas', 'Lewis Mayora', 'Juliana Oliveros', 'Mateo Reina', 'Victor Marin', 'John Villalba', 'Carlos Acero'],
+                title: {
+                    text: 'Rep Name'
+                }
+            },
+            yAxis: {
+                title: {
+                    text: 'Call Count'
+                }
+            },
+            plotOptions: {
+                column: {
+                    grouping: false,
+                    shadow: false,
+                    borderWidth: 0
+                },
+                series: {
+                    dataLabels: {
+                        enabled: true,
+                        format: '{point.y:.0f}' // Display actual numbers
+                    }
+                }
+            },
+            series: [{
+                name: 'Total Calls',
+                data: [69, 53, 47, 37, 37, 25, 19, 18],
+                color: 'green',
+                pointPadding: 0.2,
+                pointPlacement: -0.2
+            }, {
+                name: 'Inbound Calls',
+                data: [0, 1, 0, 1, 0, 0, 0, 10],
+                color: 'skyblue',
+                pointPadding: 0.1,
+                pointPlacement: 0.0
+            }, {
+                name: 'Outbound Calls',
+                data: [69, 52, 47, 36, 37, 25, 19, 8],
+                color: 'blue',
+                pointPadding: 0.2,
+                pointPlacement: 0.2
+            }, {
+                name: 'Appointments',
+                data: [1, 1, 3, 1, 1, 3, 2, 1],  // Corrected to 'Record Count'
+                color: '#32cd32', // Vibrant green color for appointments
+                pointPadding: 0.3, // Adjust padding as needed
+                pointPlacement: 0.4 // Adjust placement as needed
+            }]
+        });
+    </script>
+</body>
+</html>

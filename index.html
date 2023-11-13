@@ -37,7 +37,7 @@
 <body>
     <div class="container">
         <img src="https://github.com/geomodi/DiALpptsSLS/blob/main/wwbdc-logo.png?raw=true" alt="Company Logo" class="logo"> <!-- Logo added here -->
-        <div class="report-interval">Report Generated From 10AM to 11AM</div> <!-- Reporting interval added here -->
+        <div class="report-interval">Report Generated From 11AM to 12PM</div> <!-- Reporting interval added here -->
         <div id="container" style="height: 780px;"></div> <!-- Increased graph size by 30% -->
     </div>
 
@@ -50,7 +50,7 @@
                 text: 'Dials and Appointments by Rep'  // Updated title
             },
             xAxis: {
-                categories: ['Lewis Mayora', 'Daniela Zuluaga', 'Juan Esteban', 'Sandra Callejas', 'Juan Castano', 'Mateo Reina', 'Juliana Oliveros', 'Tomas Toro', 'Victor Marin', 'Victor Marin', 'John Villalba', 'Itzjack Gonzalez', 'Mateo Calderon', 'Ivan Marengo', 'Carlos Acero'],
+                categories: ['Lewis Mayora', 'Daniela Zuluaga', 'Sandra Callejas', 'Juan Esteban', 'Tomas Toro', 'Mateo Reina', 'Juan Castano', 'Juliana Oliveros', 'Victor Marin', 'Victor Marin', 'John Villalba', 'Itzjack Gonzalez', 'Ivan Marengo', 'Mateo Calderon', 'Carlos Acero', 'Sebastian Sanjuan', 'Enrique Callejas', 'Tatiana Valencia', 'Jose Potes', 'David Cerro', 'Pablo Echeverri'],
                 title: {
                     text: 'Rep Name'
                 }
@@ -75,25 +75,25 @@
             },
             series: [{
                 name: 'Total Calls',
-                data: [155, 149, 128, 123, 112, 100, 93, 92, 85, 85, 70, 62, 57, 52, 50],
+                data: [204, 185, 183, 166, 138, 136, 123, 108, 99, 99, 89, 76, 75, 75, 57, 55, 44, 36, 27, 26, 17],
                 color: 'green',
                 pointPadding: 0.2,
                 pointPlacement: -0.2
             }, {
                 name: 'Inbound Calls',
-                data: [1, 5, 4, 12, 13, 3, 6, 8, 6, 6, 0, 7, 4, 3, 41],
+                data: [1, 6, 12, 4, 11, 4, 13, 6, 10, 10, 0, 9, 3, 9, 47, 2, 1, 3, 0, 4, 3],
                 color: 'skyblue',
                 pointPadding: 0.1,
                 pointPlacement: 0.0
             }, {
                 name: 'Outbound Calls',
-                data: [154, 144, 124, 111, 99, 97, 87, 84, 79, 79, 70, 55, 53, 49, 9],
+                data: [203, 179, 171, 162, 127, 132, 110, 102, 89, 89, 89, 67, 72, 66, 10, 53, 43, 33, 27, 22, 14],
                 color: 'blue',
                 pointPadding: 0.2,
                 pointPlacement: 0.2
             }, {
                 name: 'Appointments',
-                data: [8, 7, 6, 9, 4, 6, 5, 2, 4, 1, 3, 3, 1, 1, 2],  // Corrected to 'Record Count'
+                data: [11, 8, 11, 6, 4, 6, 4, 6, 5, 1, 4, 4, 1, 2, 2, 1, 3, 2, 2, 2, 1],  // Corrected to 'Record Count'
                 color: '#32cd32', // Vibrant green color for appointments
                 pointPadding: 0.3, // Adjust padding as needed
                 pointPlacement: 0.4 // Adjust placement as needed

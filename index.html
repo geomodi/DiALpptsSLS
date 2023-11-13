@@ -27,11 +27,17 @@
             width: 100px; /* Adjust the size as needed */
             z-index: 1; /* Ensure the logo is on top of other elements */
         }
+        .report-interval {
+            text-align: right;
+            padding: 10px;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <img src="https://github.com/geomodi/DiALpptsSLS/blob/main/wwbdc-logo.png?raw=true" alt="Company Logo" class="logo"> <!-- Logo added here -->
+        <div class="report-interval">Report Generated From 09AM to 10AM</div> <!-- Reporting interval added here -->
         <div id="container" style="height: 780px;"></div> <!-- Increased graph size by 30% -->
     </div>
 
@@ -41,10 +47,10 @@
                 type: 'column'
             },
             title: {
-                text: 'Call Statistics by Rep'
+                text: 'Dials and Appointments by Rep'  // Updated title
             },
             xAxis: {
-                categories: ['Daniela Zuluaga', 'Sandra Callejas', 'Lewis Mayora', 'Juliana Oliveros', 'Mateo Reina', 'Victor Marin', 'John Villalba', 'Carlos Acero'],
+                categories: ['Daniela Zuluaga', 'Sandra Callejas', 'Lewis Mayora', 'Mateo Reina', 'Juan Esteban', 'Juliana Oliveros', 'Victor Marin', 'Itzjack Gonzalez', 'John Villalba', 'Tomas Toro', 'Ivan Marengo', 'Carlos Acero'],
                 title: {
                     text: 'Rep Name'
                 }
@@ -69,25 +75,25 @@
             },
             series: [{
                 name: 'Total Calls',
-                data: [69, 53, 47, 37, 37, 25, 19, 18],
+                data: [126, 88, 88, 84, 70, 61, 58, 43, 40, 36, 33, 29],
                 color: 'green',
                 pointPadding: 0.2,
                 pointPlacement: -0.2
             }, {
                 name: 'Inbound Calls',
-                data: [0, 1, 0, 1, 0, 0, 0, 10],
+                data: [0, 7, 0, 1, 4, 3, 3, 4, 0, 7, 1, 20],
                 color: 'skyblue',
                 pointPadding: 0.1,
                 pointPlacement: 0.0
             }, {
                 name: 'Outbound Calls',
-                data: [69, 52, 47, 36, 37, 25, 19, 8],
+                data: [126, 81, 88, 83, 66, 58, 55, 39, 40, 29, 32, 9],
                 color: 'blue',
                 pointPadding: 0.2,
                 pointPlacement: 0.2
             }, {
                 name: 'Appointments',
-                data: [1, 1, 3, 1, 1, 3, 2, 1],  // Corrected to 'Record Count'
+                data: [4, 6, 8, 3, 6, 3, 3, 3, 3, 2, 1, 2],  // Corrected to 'Record Count'
                 color: '#32cd32', // Vibrant green color for appointments
                 pointPadding: 0.3, // Adjust padding as needed
                 pointPlacement: 0.4 // Adjust placement as needed
